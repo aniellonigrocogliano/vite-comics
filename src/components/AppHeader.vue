@@ -61,7 +61,7 @@ export default {
     </div>
     <ul class="navigation">
       <li v-for="item in menu">
-        {{item.title}}
+        <a href="" :class="{ active: item.isActive }">{{ item.title }}</a>
       </li>
     </ul>
 </section>
@@ -70,6 +70,7 @@ export default {
 
 <style scoped lang="scss">
 @use "../style/partials/mixin" as *;
+@use "../style/partials/variables" as *;
 header { @include flex(row, center, center);
     
     .section-header{width:80%;
@@ -83,20 +84,23 @@ header { @include flex(row, center, center);
   ul {
     @include flex(row, center, center);
     list-style-type: none;
-    gap: 1rem;
+    gap: 0.5rem;
     margin-top: 26px;
+    font-weight: bold;
 
     a {
       padding: 10px 16px;
       text-decoration: none;
       display: inline-block;
+      color: $gray;
 
       &:hover {
-        
+        color:$blu;
       }
 
       &.active {
-        
+        color:$blu;
+        border-bottom: 5px solid $blu;
       }
     }
   }
