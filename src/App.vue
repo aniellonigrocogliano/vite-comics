@@ -1,11 +1,13 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppStar from './components/AppStar.vue';
+import AppMain from './components/AppMain.vue';
 
   export default {
   components: {
     AppHeader,
     AppStar,
+    AppMain,
   }
 
 }
@@ -14,6 +16,7 @@ import AppStar from './components/AppStar.vue';
 <template>
 <AppStar />
 <AppHeader />
+<AppMain />
 
 
 </template>
