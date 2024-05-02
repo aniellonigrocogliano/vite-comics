@@ -86,7 +86,6 @@ header { @include flex(row, center, center);
     list-style-type: none;
     gap: 0.5rem;
     margin-top: 26px;
-    font-weight: bold;
 
     a {
       padding: 10px 16px;
