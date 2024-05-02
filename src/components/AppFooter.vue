@@ -35,7 +35,19 @@ export default {
       "DC Universe",
       "DC Power Visa"
     ],
+    socialImg: [
+      'facebook',
+      'periscope',
+      'pinterest',
+      'twitter',
+      'youtube'
+    ]
 };
+  },
+  methods: {
+    getImagePath(imageName) {
+      return new URL(`../assets/img/footer-${imageName}.png`, import.meta.url).href;
+    },
   },
 };
 </script>
@@ -78,8 +90,17 @@ export default {
 </section>
 <section class="social">
     <div><a href="#" class="button">SIGN-UP NOW!</a></div>
-    <div></div>
+    <div>
+        <div> 
+    <ul ><h2>FOLLOW US</h2> 
+      <li v-for="item in socialImg">
+        <a href="" ><img :src="getImagePath(item)" alt="{{item}}" /></a>
+      </li>
+    </ul>
+</div>
+    </div>
 </section>
+<section class="footer-end"></section>
   </footer>
 </template>
 
@@ -114,7 +135,7 @@ footer{
 .social{
     @include flex(row, space-around, flex-start);
     position:absolute;
-    height:200px;
+    height:150px;
     width:100%;
     background-color:$graySocial;
     bottom:0px;
@@ -129,6 +150,22 @@ footer{
   margin: 4px 2px;
   cursor: pointer;
     }
+    h2{
+        color:$blu;
+    }
+    ul{
+        @include flex(row, space-around, center);
+        list-style-type: none;
+    gap: 0.5rem;
+    margin-top: 26px;
+    }
   }
+.footer-end{
+    position:absolute;
+    background-color: $black;
+    width:100%;
+    height:15px;
+    bottom:0px;
+}
 }
 </style>
