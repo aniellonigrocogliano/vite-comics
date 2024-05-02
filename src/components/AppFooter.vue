@@ -42,14 +42,13 @@ export default {
 
 <template>
   <footer> 
+    <section>
     <div> 
     <ul ><h2>DC COMICS</h2> 
       <li v-for="item in dcComics">
         <a href="" >{{item}}</a>
       </li>
     </ul>
-</div>
-<div> 
     <ul ><h2>SHOP</h2> 
       <li v-for="item in shop">
         <a href="" >{{item}}</a>
@@ -70,14 +69,32 @@ export default {
       </li>
     </ul>
 </div>
+</section>
+<section>
+    <img
+        src="../assets/img/dc-logo-bg.png"
+        alt="Logo DC Comics"
+      />
+</section>
+<section class="social">
+    <div><a href="#" class="button">SIGN-UP NOW!</a></div>
+    <div></div>
+</section>
   </footer>
 </template>
 
 <style lang="scss" scoped>
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
-footer{
+footer{ 
+    @include flex(row, space-around, flex-start);
     background-image: url("../assets/img/footer-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+   section{width:35%;
+    padding:15px;
+        @include flex(row, space-around, flex-start);
+    }
     h2{
         color:$white; 
     }
@@ -91,7 +108,27 @@ footer{
       text-decoration: none;
       display: inline-block;
       color: $grayFooter;
+      font-size: 0.8rem;
     }
 }
+.social{
+    @include flex(row, space-around, flex-start);
+    position:absolute;
+    height:200px;
+    width:100%;
+    background-color:$graySocial;
+    bottom:0px;
+    .button{
+        border:2px solid $blu;
+  color: $white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+    }
+  }
 }
 </style>

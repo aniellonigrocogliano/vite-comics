@@ -65,6 +65,7 @@ export default {
       </li>
     </ul>
 </section>
+
   </header>
 </template>
 
@@ -73,7 +74,7 @@ export default {
 @use "../style/partials/variables" as *;
 header { @include flex(row, center, center);
     
-    .section-header{width:80%;
+    .section-header{width:70%;
         @include flex(row, space-between, center);
         padding: 15px;
 }
@@ -92,6 +93,7 @@ header { @include flex(row, center, center);
       text-decoration: none;
       display: inline-block;
       color: $gray;
+      font-weight:900;
 
       &:hover {
         color:$blu;
@@ -103,6 +105,7 @@ header { @include flex(row, center, center);
       }
     }
   }
+
 
 }
 
