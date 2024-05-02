@@ -40,20 +40,38 @@ export default {
       'periscope',
       'pinterest',
       'twitter',
-      'youtube'
-    ]
+      'youtube',
+    ],
+    cards: [
+      { nome: 'DIGITAL COMICS', url: 'buy-comics-digital-comics.png' },
+      { nome: 'DC MERCHANDISE', url: 'buy-comics-merchandise.png' },
+      { nome: 'SUBSCRIPTION', url: 'buy-comics-subscriptions.png' },
+      { nome: 'COMIC SHOP LOCATOR', url: 'buy-comics-shop-locator.png' },
+      { nome: 'DC POWER VISA', url: 'buy-dc-power-visa.svg' }
+    ],
 };
   },
   methods: {
     getImagePath(imageName) {
       return new URL(`../assets/img/footer-${imageName}.png`, import.meta.url).href;
     },
+    getImagePathCard(imageName) {
+      return new URL(`../assets/img/${imageName}`, import.meta.url).href;
+    },
   },
+  
 };
 </script>
 
 <template>
   <footer> 
+    <section class="card"> <ul > 
+      <li v-for="item in cards">
+        
+        <a href="" ><img :src="getImagePathCard(item.url)" alt="{{item.nome}}" /></a>
+        <h5>{{item.nome}}</h5>
+      </li>
+    </ul></section>
     <section>
     <div> 
     <ul ><h2>DC COMICS</h2> 
@@ -108,7 +126,7 @@ export default {
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
 footer{ 
-    @include flex(row, space-around, flex-start);
+    @include flex(row, space-around, center);
     background-image: url("../assets/img/footer-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -166,6 +184,24 @@ footer{
     width:100%;
     height:15px;
     bottom:0px;
+}
+.card{
+    position:absolute;
+    background-color: $blu;
+    color:$white;
+    width:100%;
+    
+    top: 300px;
+   img{
+    height:50px;
+   }
+    ul{
+         @include flex(row, space-around, center);
+         width:70%;
+         li{
+            @include flex(row, space-around, center);
+         }
+    }
 }
 }
 </style>
