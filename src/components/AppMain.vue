@@ -86,24 +86,40 @@ export default {
 </script>
 
 <template>
+    <div class="jumbotron">
+
+    </div>
     <main>
+        <div class="container">
   <AppComics 
   v-for="item in ArrayComics"
         :itemThumb="item.thumb"
         :itemPrice="item.price"
-        :itemPeries="item.series"
+        :itemSeries="item.series"
         :itemTtype="item.type"
   />
+        </div>
     </main>
 </template>
 
 <style lang="scss" scoped>
+@use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
-main{
+.jumbotron{
+    height:25vh;
+    background-image: url("../assets/img/jumbotron.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main{ @include flex(row, space-around, center);
     background-color: $black;
-    height:150px;
     h2{
         color:$white;
+    }
+    .container{
+        @include flex(row, space-around, center);
+        width:70%;
+        flex-wrap: wrap;
     }
 }
 </style>

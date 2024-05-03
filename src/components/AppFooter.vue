@@ -125,7 +125,7 @@ export default {
 <style lang="scss" scoped>
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
-footer{ 
+footer{ position: relative;
     @include flex(row, space-around, center);
     background-image: url("../assets/img/footer-bg.jpg");
     background-repeat: no-repeat;
@@ -159,7 +159,7 @@ footer{
     height:150px;
     width:100%;
     background-color:$graySocial;
-    bottom:0px;
+    bottom:0;
     .button{
         border:2px solid $blu;
   color: $white;
@@ -189,14 +189,14 @@ footer{
     background-color: $black;
     width:100%;
     height:15px;
-    bottom:0px;
+    bottom:0;
 }
 .card{
     position:absolute;
     background-color: $blu;
     color:$white;
     width:100%;
-    top: 290px;
+    top: 0;
    img{ margin-right:10px;
     height:60px;
    }
