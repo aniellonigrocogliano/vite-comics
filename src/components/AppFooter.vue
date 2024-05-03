@@ -190,10 +190,9 @@ footer{
     background-color: $blu;
     color:$white;
     width:100%;
-    
-    top: 300px;
+    top: 290px;
    img{
-    height:50px;
+    height:60px;
    }
     ul{
          @include flex(row, space-around, center);
