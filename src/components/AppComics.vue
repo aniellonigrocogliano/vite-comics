@@ -23,7 +23,9 @@ export default {
         <div class="card">
         <img :src="getImagePath(itemThumb)" :alt="itemSeries" />
         <h5> {{ itemSeries }}</h5>
-        <p>Prezzo:{{ itemPrice }}</p>
+        <p>Genere: {{ itemType }}</p>
+        <p>Prezzo: {{ itemPrice }}</p>
+        
     </div></div>
   
   </template>

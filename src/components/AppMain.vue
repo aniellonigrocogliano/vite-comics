@@ -96,7 +96,7 @@ export default {
         :itemThumb="item.thumb"
         :itemPrice="item.price"
         :itemSeries="item.series"
-        :itemTtype="item.type"
+        :itemType="item.type"
   />
         </div>
     </main>
