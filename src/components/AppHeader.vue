@@ -73,7 +73,8 @@ export default {
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
 header { @include flex(row, center, center);
-    
+  height: 130px;
+line-height: 80px;
     .section-header{width:70%;
         @include flex(row, space-between, center);
         padding: 15px;
@@ -81,6 +82,7 @@ header { @include flex(row, center, center);
     
   .logo {
     text-align: center;
+    padding-top: 50px;
   }
   ul {
     @include flex(row, center, center);
