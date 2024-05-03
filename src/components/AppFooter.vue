@@ -148,6 +148,9 @@ footer{
       display: inline-block;
       color: $grayFooter;
       font-size: 0.8rem;
+      &:hover {
+      opacity: 0.5;
+      }
     }
 }
 .social{
@@ -168,6 +171,9 @@ footer{
   margin: 4px 2px;
   cursor: pointer;
     }
+    a:hover {
+      opacity: 0.5;
+      }
     h2{
         color:$blu;
     }
@@ -191,7 +197,7 @@ footer{
     color:$white;
     width:100%;
     top: 290px;
-   img{
+   img{ margin-right:10px;
     height:60px;
    }
     ul{
@@ -199,6 +205,9 @@ footer{
          width:70%;
          li{
             @include flex(row, space-around, center);
+            a:hover {
+      opacity: 0.5;
+      }
          }
     }
 }

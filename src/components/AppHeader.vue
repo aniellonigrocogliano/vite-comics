@@ -83,6 +83,9 @@ line-height: 80px;
   .logo {
     text-align: center;
     padding-top: 50px;
+    &:hover {
+      opacity: 0.5;
+    }
   }
   ul {
     @include flex(row, center, center);
