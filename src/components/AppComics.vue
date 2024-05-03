@@ -34,6 +34,7 @@ export default {
   @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
 .row{
+    margin-top:25px;
     color:$white;
     width:16%;
     img{

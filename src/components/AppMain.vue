@@ -87,7 +87,7 @@ export default {
 
 <template>
     <div class="jumbotron">
-
+        <div><a href="#" class="button">CURRENT SERIES</a></div>
     </div>
     <main>
         <div class="container">
@@ -98,18 +98,37 @@ export default {
         :itemSeries="item.series"
         :itemType="item.type"
   />
+  <div><a href="#" class="button">LOAD MORE</a></div>
         </div>
+        
     </main>
+    
 </template>
 
 <style lang="scss" scoped>
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
-.jumbotron{
+.jumbotron{ position: relative;
     height:25vh;
     background-image: url("../assets/img/jumbotron.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    .button{
+        position:absolute;
+        bottom:-30px;
+        left:15%;
+        font-weight:900;
+        border:2px solid $blu;
+  color: $white;
+  background-color: $blu;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+    }
 }
 main{ @include flex(row, space-around, center);
     background-color: $black;
@@ -120,6 +139,33 @@ main{ @include flex(row, space-around, center);
         @include flex(row, space-around, center);
         width:70%;
         flex-wrap: wrap;
+    }
+    .button{
+        border:2px solid $blu;
+  color: $white;
+  background-color: $blu;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding:5px;
+  margin-bottom:30px;
+  font-weight:900;
+    }
+    a:hover {
+      opacity: 0.5;
+      }
+    h2{
+        color:$blu;
+    }
+    ul{
+        @include flex(row, space-around, center);
+        list-style-type: none;
+    gap: 0.5rem;
+    margin-top: 26px;
     }
 }
 </style>
